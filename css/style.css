@@ -1,0 +1,732 @@
+@import url('https://fonts.googleapis.com/css2?family=Titan+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Titan+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fjalla+One&family=Source+Sans+3:wght@300;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fjalla+One&family=Libre+Baskerville:wght@700&family=Source+Sans+3:ital,wght@0,300;0,600;1,700&display=swap');
+@import url('reset.css');
+:root {
+
+
+
+  /*farver*/
+  --red: #590808;
+  --lightgreen: #58a585;
+  --white: #d3f4e7;
+  --whitegreen: #9bbcad;
+  --darkred: #260606;
+  --blue: #1b2351;
+  --green: #c8e8dc;
+  --lightred: #7c2d2d;
+  --pinkgrey: #bca2a2;
+
+
+/*fonte*/
+--heading: 'Titan One', cursive;
+--text: 'Libre Baskerville', serif;
+--text2: 'Source Sans 3', sans-serif;
+--text3: 'Source Sans 3', sans-serif;
+--text4:'Libre Baskerville', serif;
+
+}
+
+
+header {
+
+ background: var(--red);
+ font-family: var(--heading);
+ text-align: center;
+ position: fixed;
+ z-index: 999;
+ width: 100vw;
+ min-height: 150px;
+ display: flex;
+ justify-content:space-between;
+ align-items: center;
+
+}
+
+.logo{
+  width: 200px;
+  margin-left: 20px;
+
+}
+
+/*søge ikon*/
+.fa-search {
+  color: var(--whitegreen);
+  font-size: 45px;
+  margin-right: 0.5em;
+}
+
+/*burger menu*/
+.nav-toggle {
+  display: none;
+}
+
+.nav-toggle-label{
+  margin-left: 2em;
+  height: 50px;
+  display: flex;
+  align-items: center;
+}
+
+.nav-toggle-label span,
+.nav-toggle-label span::before,
+.nav-toggle-label span::after{
+  display: block;
+  background: var(--whitegreen);
+  height: 7px;
+  width: 40px;
+  border-radius: 2px;
+  position: relative;
+
+}
+
+.nav-toggle-label span::before,
+.nav-toggle-label span::after{
+
+  content: '';
+  position: absolute;
+
+}
+
+.nav-toggle-label span::before{
+
+  bottom: 17px;
+
+}
+
+.nav-toggle-label span::after{
+
+  top: 17px;
+
+}
+
+/*navigation bar inde i burgeren*/
+nav {
+
+  position: absolute;
+  text-align: left;
+  top: 100%;
+  left: 0;
+  background: var(--red);
+  width: 100%;
+  transform: scale(1,0);
+  transform-origin: top;
+  transition: transform 400ms ease-in-out;
+
+}
+
+nav ul {
+
+margin: 0;
+padding: 0;
+list-style: none;
+
+}
+
+nav li {
+
+margin-bottom: 1em;
+margin-left: 1em;
+
+}
+
+nav a {
+
+  color: var(--whitegreen);
+  text-decoration: none;
+  font-size: 1.2rem;
+  text-transform: lowercase;
+  opacity: 0;
+  transition: opacity 150ms ease-in-out;
+
+}
+
+nav a:hover {
+
+  color: #000;
+
+}
+
+.nav-toggle:checked ~ nav {
+
+transform: scale(1,1);
+
+}
+
+.nav-toggle:checked ~ nav a {
+  opacity: 1;
+  transition: opacity 250ms ease-in-out 250ms;
+}
+
+
+.red{
+  background-color: var(--red);
+  padding-top: 150px;
+}
+
+/*main*/
+
+.juleedition{
+  display: flex;
+  justify-content: center;
+  padding-bottom: 25px;
+}
+
+.juleedition img{
+  width: 150px;
+}
+
+
+.sne{
+  width:100%
+}
+
+.whitebackground{
+  background-color: var(--white);
+  padding: 6px;
+}
+
+.deltagtekst {
+ font-family: var(--text);
+ font-size: 20px;
+ margin: 5px;
+ text-align: center;
+ color: var(--darkred);
+ padding-bottom: 10px;
+}
+
+.undersidekonkurrence{
+  text-decoration: none;
+  color: var(--darkred);
+}
+
+.button {
+  border: 5px solid var(--darkred);
+  width: 14ch;
+  margin: auto;
+
+}
+
+
+.greenbackground{
+  background-color: var(--lightgreen);
+  padding: 30px;
+}
+
+.nyjollyoverskrift{
+  font-family: var(--heading);
+  font-size: 20px;
+  color: var(--white);
+  text-align: center;
+}
+
+
+.nyjollytekst{
+  font-family: var(--text);
+  margin-top: 15px;
+  font-size: 20px;
+  text-align: center;
+
+}
+
+.undersidenyjolly{
+  text-decoration: none;
+  color: var(--darkred);
+}
+
+.redbackground{
+  background-color: var(--whitegreen);
+  padding: 30px;
+}
+
+
+.klassikereoverskrift{
+  font-family: var(--heading);
+  padding: 10px;
+  font-size: 28px;
+  color: var(--white);
+  text-align: center;
+}
+
+.klassikeretekst{
+  font-family: var(--text);
+  font-size: 20px;
+  margin: 5px;
+  text-align: center;
+  color: var(--darkred);
+  padding: 5px;
+}
+
+.klassikeretekst h3{
+  border: 5px solid var(--darkred);
+}
+
+.undersideprodukter{
+  text-decoration: none;
+  color: var(--darkred);
+}
+
+
+
+/*underside produkter*/
+
+/*baggrund af produkter*/
+.backgroundproducts{
+  background-color: var(--white);
+  padding-top: 10px;
+  padding-bottom: 30px;
+}
+
+.productsheading{
+  font-family: var(--heading);
+  color: var(--lightgreen);
+  text-align: center;
+  padding: 30px;
+}
+
+/*produkter i grid*/
+.grid{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  gap: 2rem;
+  margin-inline: 2rem;
+}
+.card{
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.can1{
+  --can: #5b9659;
+}
+.can2{
+  --can: #a6e2bb;
+}
+.can3{
+  --can: #e2d774;
+}
+.can4{
+  --can: #7da9b7;
+}
+.can5{
+  --can: #d2dce9;
+}
+.can6{
+  --can: #a6b5dd;
+}
+.can-bg{
+  background-color: var(--can);
+}
+.card-text{
+  background-color: var(--can);
+  text-align: center;
+}
+
+/* underside konkurrence */
+
+.konkurrence-bg{
+  padding-top: 5px;
+  background-color: var(--white);
+}
+
+.konkurrence-heading h3{
+  font-family: var(--heading);
+  color: var(--darkred);
+  font-size: 24px;
+  text-align: center;
+  padding-inline: 20px;
+}
+
+.konkurrence-red-bgd{
+  background-color: var(--red);
+}
+
+.green-box{
+  background-color: var(--white);
+  padding: 20px;
+}
+
+.konkurrence-text {
+  background-color: #c0e2d1;
+  font-family: var(--text);
+  color: var(--darkred);
+  font-size: 12px;
+  text-align: center;
+  padding:10px;
+}
+
+.konkurrence-deltag{
+  text-transform: uppercase;
+  color: var(--blue);
+  font-family: var(--text2);
+  text-decoration-style: double;
+  text-align: center;
+  font-size: 40px;
+  font-weight: bolder;
+  padding-top: 10px;
+}
+
+.infographic_konkurrence{
+  margin: 1px;
+}
+
+/*box for deltagelse*/
+form input {
+  border: 5px solid var(--blue);
+  background-color: var(--white);
+  margin: auto;
+  margin-top: 10px;
+  margin-bottom: 15px;
+  padding: 5px;
+}
+/*skrift ovenfor box*/
+.anmeldelse{
+  color: var(--red);
+  background-color: var(--white);
+  font-family: var(--text2);
+  font-size: 30px;
+  font-weight: bolder;
+  padding-top: 10px;
+  text-align: center;
+}
+
+.stjerne-tekst{
+  font-family: var(--text2)
+  font-size: 5px;
+  background-color: var(--white);
+}
+
+/*dennyejolly underside*/
+
+/*billede i toppen*/
+.ny_jolly_daaser{
+  position: relative;
+}
+/*tekst på billedet*/
+.ny_jolly_daaser h2{
+position: absolute;
+font-family: var(--heading);
+color: var(--red);
+font-size: 2rem;
+}
+
+
+.ny_jolly_tekst{
+  font-family: var(--text);
+  color: var(--darkred);
+  text-align: center;
+  padding: 20px;
+}
+
+.ny_jolly_overskrift{
+  font-family: var(--text);
+  color: var(--darkred);
+  font-size: 20px;
+  text-align: center;
+  padding: 20px;
+}
+
+.ny_jolly_om{
+  font-family: var(--text);
+  color: var(--darkred);
+  text-align: center;
+  padding: 20px;
+}
+
+.mint{
+    background-color: var(--white);
+}
+
+.gammel_jolly {
+  width: 80%;
+  margin-inline: auto;
+
+}
+
+/*footer*/
+.footer{
+  background-color: var(--red);
+  font-family: var(--text);
+  font-size: 22px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+.footer h2{
+  color: var(--lightgreen);
+}
+
+.footer p{
+  color: var(--lightgreen);
+}
+
+/*sociale medier ikoner*/
+.fa-instagram{
+  font-size: 80px;
+}
+
+.fa-facebook-square{
+  font-size: 80px;
+}
+
+.fa-linkedin{
+  font-size: 80px;
+}
+
+.icons{
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 15px;
+  gap: 1rem;
+}
+.icons a{
+  color: var(--lightgreen);
+}
+
+/*for at produkterne ikke vises på mobil versionen*/
+.produkter-overskrift{
+  display: none;
+}
+
+.produkter-tekst{
+  display: none;
+}
+
+.index-grid{
+  display: none;
+}
+  .fa-chevron-down{
+    display: none;
+  }
+
+
+
+
+
+@media only screen and (min-width: 450px){
+  .nav-toggle-label{
+    display: none;
+  }
+
+/*forside*/
+  header{
+    background-color: transparent;
+    position: static;
+    background: linear-gradient(
+      to right,
+      var(--red) 0%,
+      var(--red) 50%,
+      var(--lightgreen) 50%,
+      var(--lightgreen) 100%
+      );
+  }
+  .redheader{
+    background: var(--red);
+  }
+
+  header nav{
+    position: static;
+    transform: scale(1);
+    background-color: transparent;
+  }
+
+  header nav a{
+    opacity: 1;
+    color: var(--white);
+  }
+
+  .fa-search{
+    color: var(--white);
+  }
+
+  .logo{
+    width: 200px;
+  }
+
+/*menupunkter*/
+  header nav ul{
+    display: flex;
+    margin-left: 20%;
+    gap: 25%;
+
+  }
+
+  .fa-search {
+    font-size: 20px;
+    padding-right: 10px;
+  }
+  .point-down{
+    position: relative;
+  }
+/*pil*/
+  .fa-chevron-down{
+    display: block;
+    position: absolute;
+    bottom: 80px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 3rem;
+    border: 5px solid black;
+    color
+  }
+
+  .desktop-wrap{
+    display: flex;
+  }
+
+  .desktop-wrap > * {
+    width: 50%;
+
+  }
+
+  .red {
+    padding-top: 32px;
+  }
+
+
+  .juleedition img{
+    width: 25%;
+  }
+
+  .nyjollyoverskrift{
+    font-size: 40px;
+    padding-top: 80px;
+  }
+
+.nyjollyoverskrift img{
+  margin-bottom: 25px;
+  width: 100%;
+}
+
+.button{
+  padding: 16px;
+}
+
+.button2{
+ margin-top: 215px;
+}
+
+.nyjollytekst{
+  margin-top: 100px;
+}
+
+.redbackground{
+  display: none;
+}
+
+.desktop-produkter{
+  display: block;
+}
+
+.produkter-overskrift{
+  background-color: var(--white);
+  display: block;
+  font-family: var(--heading);
+  padding-top: 30px;
+  padding-bottom: 30px;
+  font-size: 50px;
+  color: var(--darkred);
+  text-align: center;
+}
+
+.produkter-tekst{
+  background-color: var(--white);
+  display: block;
+  font-family: var(--text);
+  font-size: 18px;
+  text-align: center;
+  color: var(--lightred);
+  padding-bottom: 30px;
+}
+
+.index-grid{
+  display: grid;
+  padding: 40px 90px 40px;
+  background-color: var(--lightred);
+  margin: 0;
+}
+
+/*underside den nye jolly*/
+.ny_jolly_daaser img{
+  width: 100%;
+}
+.ny_jolly_daaser h2{
+  font-size: 80px;
+}
+.ny_jolly_tekst{
+  font-size: 20px;
+  padding-inline: 10%;
+  padding-top: 50px;
+}
+
+.ny_jolly_overskrift{
+  font-size: 30px;
+  padding: 30px;
+}
+
+.ny_jolly_om{
+  display: flex;
+  align-items: center;
+  background-color: #c0e2d1;
+}
+.ny_jolly_om img{
+  width: 25%;
+  margin-right: 170px;
+}
+
+.ny_jolly_om h3{
+  padding-inline: 10%;
+}
+
+/*underside konkurrence*/
+.konkurrence_picture img{
+  width: 100%;
+  margin: auto;
+  background-color: #1b2351;
+}
+
+.konkurrence-heading h3{
+  font-size: 40px;
+  padding: 20px;
+}
+
+.green-box{
+  padding-inline: 60px;
+  padding-bottom: 40px;
+}
+.infographic{
+  width: 60%;
+  margin-left: 150px;
+}
+
+
+.infographic-desktop img{
+  width: 100%;
+}
+
+.anmeldelse{
+  background-color: #bde7f2;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.stjerne-tekst{
+  background-color: #bde7f2;
+}
+
+.footer{
+  flex-direction: row;
+  align-items: flex-end;
+}
+
+.footer h2{
+  padding-top: 30px;
+  padding-left: 30px;
+}
+
+.footer p{
+  padding-left: 30px;
+}
